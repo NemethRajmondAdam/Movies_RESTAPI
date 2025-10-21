@@ -1,0 +1,31 @@
+meta {
+  name: postMovies
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8000/api/movies
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+      "name":"Teszt Elete",
+      "categories_id":1,
+      "description":"leiras",
+      "length":"1h-11min",
+      "release_date":"2025",
+      "director_id":1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

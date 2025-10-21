@@ -1,0 +1,26 @@
+meta {
+  name: patchActors
+  type: http
+  seq: 20
+}
+
+patch {
+  url: http://localhost:8000/api/actors/21
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+    "name":"Teszt Elek"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

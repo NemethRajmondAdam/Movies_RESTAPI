@@ -1,0 +1,26 @@
+meta {
+  name: patchCategories
+  type: http
+  seq: 16
+}
+
+patch {
+  url: http://localhost:8000/api/categories/5
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+    "category":"Karacsony"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

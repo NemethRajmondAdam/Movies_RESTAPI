@@ -1,0 +1,23 @@
+meta {
+  name: postUsers
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8000/api/users/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email":"movieFan@movies.com",
+    "password":"123"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

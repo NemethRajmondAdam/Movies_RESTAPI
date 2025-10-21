@@ -1,0 +1,26 @@
+meta {
+  name: postCategories
+  type: http
+  seq: 15
+}
+
+post {
+  url: http://localhost:8000/api/categories
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+    "category":"Karacsonyi"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

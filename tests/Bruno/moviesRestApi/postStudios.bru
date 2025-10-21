@@ -1,0 +1,26 @@
+meta {
+  name: postStudios
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:8000/api/studios
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+    "name":"TesztStudiok"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

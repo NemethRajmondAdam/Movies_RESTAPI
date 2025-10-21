@@ -1,0 +1,26 @@
+meta {
+  name: postDirectors
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8000/api/directors
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+    "name":"Fo Teszt Elek"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: deleteActors
+  type: http
+  seq: 21
+}
+
+delete {
+  url: http://localhost:8000/api/actors/21
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

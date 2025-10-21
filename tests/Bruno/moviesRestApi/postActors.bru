@@ -1,0 +1,27 @@
+meta {
+  name: postActors
+  type: http
+  seq: 19
+}
+
+post {
+  url: http://localhost:8000/api/actors
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9
+}
+
+body:json {
+  {
+    "name":"TESZT ELEK",
+    "gender":"M"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

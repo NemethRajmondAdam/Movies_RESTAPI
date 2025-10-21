@@ -1,0 +1,719 @@
+{
+  "info": {
+    "name": "moviesRestApi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "postUsers",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "users",
+            "login"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\":\"movieFan@movies.com\",\n  \"password\":\"123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "getMovies",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/movies",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "movies"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "postMovies",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/movies",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "movies"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"Teszt Elete\",\n    \"categories_id\":1,\n    \"description\":\"leiras\",\n    \"length\":\"1h-11min\",\n    \"release_date\":\"2025\",\n    \"director_id\":1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "patchMovies",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/movies/10",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "movies",
+            "10"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"A FO Teszt Elete\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deleteMovies",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/movies/9",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "movies",
+            "9"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "getDirectors",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/directors",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "directors"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "postDirectors",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/directors",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "directors"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Fo Teszt Elek\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "patchDirectors",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/directors/8",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "directors",
+            "8"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Fo T. Elek\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deleteDirectors",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/directors/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "directors",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "getStudios",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/studios",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "studios"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "postStudios",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/studios",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "studios"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"TesztStudiok\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "patchStudios",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/studios/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "studios",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Teszt Studio\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deleteStudios",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/studios/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "studios",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "getCategories",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/categories",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "categories"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "postCategories",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/categories",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "categories"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"category\":\"Karacsonyi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "patchCategories",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/categories/5",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "categories",
+            "5"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"category\":\"Karacsony\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deleteCategories",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/categories/5",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "categories",
+            "5"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "getActors",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/actors",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "actors"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "postActors",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/actors",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "actors"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"TESZT ELEK\",\n  \"gender\":\"M\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "patchActors",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/actors/21",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "actors",
+            "21"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Teszt Elek\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deleteActors",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "3|sOKQnJKli0FflUW3XCVyC3kGSLfJBkkIXcMEWkFn225f7ae9",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8000/api/actors/21",
+          "protocol": "http",
+          "host": [
+            "localhost:8000"
+          ],
+          "path": [
+            "api",
+            "actors",
+            "21"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
+}
